@@ -1,0 +1,161 @@
+.header {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.header .score {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; 
+  margin: 20px;
+}
+
+.top,
+.bottom {
+  flex: 1;
+  padding: 20px;
+}
+
+.top {
+  background-color: #f0f0f0;
+}
+
+.bottom {
+  background-color: #eaeaea;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.top input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+
+.input-container {
+  position: relative;
+}
+
+.input-container input[type="text"] {
+  width: calc(100% - 100px);
+  padding: 10px;
+}
+
+.input-container button[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.input-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.top ul {
+  list-style: none;
+  padding: 0;
+}
+
+.top ul li {
+  margin-bottom: 5px;
+}
+
+.bottom .question h3,
+.bottom .options h3 {
+  margin-top: 0;
+}
+
+.bottom .options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.option-buttons button {
+  width: 400px;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.option-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.disable-hover button:hover {
+  background-color: inherit;
+  color: inherit; 
+  cursor: not-allowed; 
+}
+
+.option-buttons button.clicked {
+  background-color: yellow;
+}
+
+.answer-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.answer-button button {
+  width: 400px;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  /* cursor: pointer; */
+}
+
+.answer-button button:hover {
+  background-color: #008000;
+}
+
+.next-question {
+  text-align: center;
+  margin-top: 20px;
+  
+}
+
+.next-question button{
+  background-color: rgb(65, 62, 62);
+  color: white;
+  cursor: pointer;
+  padding: 4px 8px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+h5 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
