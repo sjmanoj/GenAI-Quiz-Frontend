@@ -1,0 +1,45 @@
+<div class="header">
+  <h1>Generative AI Quiz Bot</h1>
+  <p class="score">Score: {{score}}</p>
+</div>
+<div class="container">
+  <div class="top">
+    <h2>Provide A Topic Of Your Choice</h2>
+    <form [formGroup]="quizForm" (ngSubmit)="onSubmit()">
+      <div class="input-container">
+        <input type="text" formControlName="questionInput" placeholder="Enter your question...">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="bottom" *ngIf="question">
+    <h2>Quiz Module</h2>
+    <div class="question">
+      <h3>Question:</h3>
+      <p>{{question}}</p>
+    </div>
+    <div class="options">
+      <h3>Options:</h3>
+      <div class="option-buttons">
+        <div *ngFor="let item of options.slice(0,2)">
+          <button (click)="selectOption(item)" [disabled]="answerGiven">{{item}}</button>
+        </div>
+      </div>
+      <div class="option-buttons">
+        <div *ngFor="let item of options.slice(2, 4)">  
+          <button (click)="selectOption(item)" [disabled]="answerGiven">{{item}}</button>
+        </div>
+      </div>
+      <div class="answer-button" *ngIf="answerGiven">
+        <button [style.background-color]="answerColor">Correct Answer: {{answer}}</button>
+      </div>
+    </div>
+    <div class="next-question" *ngIf="answerGiven">
+      <button (click)=onSubmit()>Next Question</button>
+      <button (click)=resetGame()>Reset Game</button>
+    </div>
+  </div>
+</div>
+<div class="copyright">
+  <h5>&copy; 2024 Manoj S J | All Rights Reserved</h5>
+</div>
